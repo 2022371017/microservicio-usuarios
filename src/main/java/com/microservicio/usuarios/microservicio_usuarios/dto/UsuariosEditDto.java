@@ -8,5 +8,5 @@ public class UsuariosEditDto {
     private String nom;
     private String rol;
     private String email;
-    private String estatus;
+    private int estatus;
 }

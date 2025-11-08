@@ -30,6 +30,6 @@ public class Usuarios {
     private String email;
 
     @Column(name = "estatus", nullable = false)
-    private String estatus;
+    private int estatus;
 
 }
