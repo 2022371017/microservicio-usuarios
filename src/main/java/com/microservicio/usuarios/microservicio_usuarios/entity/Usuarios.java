@@ -16,20 +16,18 @@ public class Usuarios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "matricula", nullable = false, unique = true)
+    @Column(name = "matricula", nullable = true, unique = true)
     private String matricula;
-
-    @Column(name = "nom", nullable = false)
-    private String nom;
-
-    @Column(name = "rol", nullable = false)
-    private String rol;
-
+    
+    @Column(name = "nombre", nullable = false)
+    private String nombre;
+    
     @Column(name = "email", nullable = false, unique = true)
     private String email;
-
+    
+    @Column(name = "rol", nullable = false)
+    private Array rol;
+    
     @Column(name = "estatus", nullable = false)
-    private int estatus;
-
+    private Boolean estatus;
 }
