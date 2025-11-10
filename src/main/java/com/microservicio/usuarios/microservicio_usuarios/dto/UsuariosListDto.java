@@ -1,5 +1,13 @@
 package com.microservicio.usuarios.microservicio_usuarios.dto;
 
+import lombok.Data;
+
+@Data
 public class UsuariosListDto {
+    private Long id;
+    private String matricula;
+    private String nom;
+    private String rol;
+    private String email;
 
 }
