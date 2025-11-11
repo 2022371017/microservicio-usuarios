@@ -26,7 +26,7 @@ public class Usuarios {
     private String email;
     
     @Column(name = "rol", nullable = false)
-    private Array rol;
+    private String rol;
     
     @Column(name = "estatus", nullable = false)
     private Boolean estatus;
