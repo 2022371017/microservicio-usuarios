@@ -16,15 +16,16 @@ public class Usuarios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "matricula", nullable = true, unique = true)
+
+    @Column(name = "matricula", unique = true)
     private String matricula;
-    
+
     @Column(name = "nombre", nullable = false)
     private String nombre;
-    
+
     @Column(name = "email", nullable = false, unique = true)
     private String email;
-    
+
     @Column(name = "rol", nullable = false)
     private String rol;
     
