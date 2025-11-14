@@ -9,5 +9,5 @@ public class UsuariosListDto {
     private String nom;
     private String rol;
     private String email;
-
+    private int estatus;
 }

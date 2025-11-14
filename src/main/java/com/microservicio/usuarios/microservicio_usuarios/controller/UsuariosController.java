@@ -7,10 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "http:localhost:5173")
+import com.microservicio.usuarios.microservicio_usuarios.service.UsuariosService;
+import com.microservicio.usuarios.microservicio_usuarios.dto.UsuariosListDto;
+import java.util.List;
+
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/usuarios")
-
 public class UsuariosController {
 
     @Autowired
