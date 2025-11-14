@@ -2,7 +2,7 @@
  * @Author                : adolnb<loro.lorenzonunez@gmail.com>              *
  * @CreatedDate           : 2025-11-10 18:20:55                              *
  * @LastEditors           : adolnb<loro.lorenzonunez@gmail.com>              *
- * @LastEditDate          : 2025-11-10 18:43:08                              *
+ * @LastEditDate          : 2025-11-13 18:19:58                              *
  * @FilePath              : UsuariosController.java                          *
  * @CopyRight             : © 2025 Adonai LN - B0MB0                         *
  ****************************************************************************/
@@ -12,6 +12,7 @@ package com.microservicio.usuarios.microservicio_usuarios.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -37,6 +38,7 @@ public class UsuariosController {
         return usuariosService.agregarUsuario(dto);
     }
 
+    // Editar Usuario - Adonai Lorenzo BMB
     @PutMapping("/editar/{id}")
     public ResponseEntity<Usuarios> editarUsuario(@PathVariable Long id, @RequestBody UsuariosEditDto dto) {
         try {
@@ -45,5 +47,11 @@ public class UsuariosController {
         } catch (RuntimeException e) {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    // Historia de usuario Eliminar Usuario - Erwin Javier Martinez Morales
+    @DeleteMapping("/eliminar-usuario/{id}")
+    public boolean deleteUsuarios(@PathVariable Long id) {
+        return usuariosService.deleteUsuarios(id);
     }
 }
